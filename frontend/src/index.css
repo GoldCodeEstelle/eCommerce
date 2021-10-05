@@ -9,3 +9,20 @@ color: rgb(8, 6, 6);
 background-color: whitesmoke;
 }
 
+h3 {
+  padding: 1rem 0;
+}
+
+
+.rating span {
+  margin: 0.1rem;
+}
+
+.card-body {
+  color: black;
+}
+
+.card-body a {
+  color: black;
+}
+
