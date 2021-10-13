@@ -24,5 +24,10 @@
   "homepage": "https://github.com/GoldCodeEstelle/eCommerce#readme",
   "dependencies": {
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "concurrently": "^6.3.0",
+    "i": "^0.3.7",
+    "nodemon": "^2.0.13"
   }
 }
