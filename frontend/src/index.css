@@ -6,6 +6,7 @@ h3 {
   padding: 1rem 0;
 }
 
+
 h1 {
   font-size: 1.8rem;
   padding: 1rem 0;
@@ -31,8 +32,10 @@ h2 {
   top: 0;
 }
 
+
+
 .carousel-caption h2 {
-  color: #fff;
+  color: rgb(255, 255, 255);
 }
 
 .carousel img {
