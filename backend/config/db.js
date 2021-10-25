@@ -1,18 +1,20 @@
 import mongoose from 'mongoose'
 
 const connectDB = async () => {
-  try {
-    const conn = await mongoose.connect('mongodb+srv://Krista1234:Krista1234@ecommerce.dhc09.mongodb.net/eCommerce?retryWrites=true', {
-      useUnifiedTopology: true,
-      useNewUrlParser: true,
-      useCreateIndex: true,
-    })
-
-    console.log(`MongoDB Connected: ${conn.connection.host}`.cyan.underline)
-  } catch (error) {
-    console.error(`Error: ${error.message}`.red.underline.bold)
-    process.exit(1)
+  let conn;
+  if (process.env.NODE_ENV === "development") {
+      conn = await mongoose.connect(process.env.MONGO_URI, {});
+  } else if (process.env.NODE_ENV === "test") {
+      conn = await mongoose.connect(process.env.TEST_MONGO_URI, {});
+  } else {
+      conn = await mongoose.connect(process.env.MONGO_URI, {});
   }
-}
 
-export default connectDB
+  console.log(
+      `MongoDB connected: ${conn.connection.host}`.cyan.underline.bold
+  );
+
+  return conn;
+};
+
+export default connectDB;
