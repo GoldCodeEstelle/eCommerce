@@ -1,39 +1,33 @@
-import React, { useState } from 'react'
-import { Form, Button, Container } from 'react-bootstrap'
+import React, { useState } from "react";
+import { Form, Button } from "react-bootstrap";
 
 const SearchBox = ({ history }) => {
-  const [keyword, setKeyword] = useState('')
+  const [keyword, setKeyword] = useState("");
 
   const submitHandler = (e) => {
-    e.preventDefault()
+    e.preventDefault();
     if (keyword.trim()) {
-      history.push(`/search/${keyword}`)
+      history.push(`/search/${keyword}`);
     } else {
-      history.push('/')
+      history.push("/");
     }
-  }
+  };
 
   return (
-
-    <Form class="form-inline" onSubmit={submitHandler} >
-      
+    <Form
+      class="form-inline justify-content-center"
+      onSubmit={submitHandler}
+      inline
+    >
       <Form.Control
-      
-        type='text'
-        name='q'
+        type="text"
+        name="q"
         onChange={(e) => setKeyword(e.target.value)}
-        placeholder='Search Products...'
-        class="ms-auto-2"
-       
+        placeholder="Search Products..."
+        class="form-control mr-sm-2"
       ></Form.Control>
-   
-   <Button  type='submit' variant='outline-success' class="form-control mb-12 mr-auto-12">
-   <div>Search</div> 
-  </Button>
-      
     </Form>
-    
-    
-  )
-}
-export default SearchBox
+  );
+};
+
+export default SearchBox;

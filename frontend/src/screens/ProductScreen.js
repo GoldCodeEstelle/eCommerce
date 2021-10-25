@@ -202,6 +202,7 @@ const ProductScreen = ({ history, match }) => {
                         disabled={loadingProductReview}
                         type='submit'
                         variant='primary'
+                        className= 'submit'
                       >
                         Submit
                       </Button>
