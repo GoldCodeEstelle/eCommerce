@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "MERN shopping cart app",
   "main": "server.js",
+  "type": "module",
   "scripts": {
     "start": "node app.js",
     "server": "nodemon backend/server",
@@ -16,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/GoldCodeEstelle/eCommerce.git"
   },
-
+  
   "author": "Krista Harris",
   "license": "MIT",
   "engines": {
