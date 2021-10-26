@@ -18,9 +18,9 @@
     "url": "git+https://github.com/GoldCodeEstelle/eCommerce.git"
   },
   "author": "Krista Harris",
-  "license": "MIT",
+  "license": "ISC",
   "engines": {
-    "node": "14.18.1"
+    "node": "12.16.1"
   },
   "bugs": {
     "url": "https://github.com/GoldCodeEstelle/eCommerce/issues"
