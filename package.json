@@ -19,6 +19,9 @@
   },
   "author": "Krista Harris",
   "license": "MIT",
+  "engines": {
+    "node": "14.18.1"
+  },
   "bugs": {
     "url": "https://github.com/GoldCodeEstelle/eCommerce/issues"
   },
