@@ -13,9 +13,12 @@ import uploadRoutes from './routes/uploadRoutes.js'
 
 dotenv.config()
 
-connectDB()
+mongoose.connect("mongodb+srv://Krista1234:Krista1234@ecommerce.dhc09.mongodb.net/eCommerce?retryWrites=true", {
+  useNewUrlParser: true
+});
 
 const app = express()
+const mongoose = require("mongoose");
 
 if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'))
@@ -50,11 +53,17 @@ if (process.env.NODE_ENV === 'production') {
 app.use(notFound)
 app.use(errorHandler)
 
-const PORT = process.env.PORT || 5000
 
-app.listen(
-  PORT,
-  console.log(
-    `Server running in ${process.env.NODE_ENV} mode on port ${PORT}`.yellow.bold
-  )
-)
+app.get("/about", function (req, res) {
+  res.render("about");
+});
+
+let port = process.env.PORT;
+if (port == null || port == "") {
+  port = 5000;
+}
+
+
+app.listen(port, function () {
+  console.log("Server has started successfully");
+});
