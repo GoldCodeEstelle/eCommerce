@@ -6,8 +6,6 @@ import { Navbar, Nav, Container, NavDropdown } from 'react-bootstrap'
 import SearchBox from './SearchBox'
 import { logout } from '../actions/userActions'
 
-
-
 const Header = () => {
   const dispatch = useDispatch()
 
@@ -20,23 +18,23 @@ const Header = () => {
 
   return (
     <header>
-      <Navbar id="mainNav" bg='primary' expand='lg' collapseOnSelect>
-        <Container id="mainNav">
-          <LinkContainer id="mainNav" to='/'>
-            <Navbar.Brand>eCommerce</Navbar.Brand>
+      <Navbar bg='dark' variant='dark' expand='lg' collapseOnSelect>
+        <Container>
+          <LinkContainer to='/'>
+            <Navbar.Brand>ProShop</Navbar.Brand>
           </LinkContainer>
-          <Navbar.Toggle id="mainNav" aria-controls='basic-navbar-nav' />
-          <Navbar.Collapse id="mainNav" id='basic-navbar-nav'>
-            <Route id="mainNav" render={({ history }) => <SearchBox history={history} />} />
-            <Nav id="mainNav"  className='ms-auto'>
-              <LinkContainer  id="mainNav"to='/cart'>
-                <Nav.Link id="mainNav">
+          <Navbar.Toggle aria-controls='basic-navbar-nav' />
+          <Navbar.Collapse id='basic-navbar-nav'>
+            <Route render={({ history }) => <SearchBox history={history} />} />
+            <Nav className='ml-auto'>
+              <LinkContainer to='/cart'>
+                <Nav.Link>
                   <i className='fas fa-shopping-cart'></i> Cart
                 </Nav.Link>
               </LinkContainer>
               {userInfo ? (
-                <NavDropdown id="mainNav" title='My Account' >
-                  <LinkContainer  to='/profile'>
+                <NavDropdown title={userInfo.name} id='username'>
+                  <LinkContainer to='/profile'>
                     <NavDropdown.Item>Profile</NavDropdown.Item>
                   </LinkContainer>
                   <NavDropdown.Item onClick={logoutHandler}>
@@ -44,14 +42,14 @@ const Header = () => {
                   </NavDropdown.Item>
                 </NavDropdown>
               ) : (
-                <LinkContainer id="mainNav" to='/login'>
+                <LinkContainer to='/login'>
                   <Nav.Link>
                     <i className='fas fa-user'></i> Sign In
                   </Nav.Link>
                 </LinkContainer>
               )}
               {userInfo && userInfo.isAdmin && (
-                <NavDropdown id="mainNav" title='Admin' >
+                <NavDropdown title='Admin' id='adminmenu'>
                   <LinkContainer to='/admin/userlist'>
                     <NavDropdown.Item>Users</NavDropdown.Item>
                   </LinkContainer>
