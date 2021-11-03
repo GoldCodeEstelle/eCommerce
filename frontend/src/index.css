@@ -89,13 +89,4 @@ h2 {
   margin-left: auto;
   margin-right: auto;
 }
-.carousel a {
-  background-color: #fff;
-  margin: 0 auto;
-}
-@media (max-width: 900px) {
-  .carousel-caption h2 {
-    background-color: #fff;
-    font-size: 2.5vw;
-  }
-}
+
