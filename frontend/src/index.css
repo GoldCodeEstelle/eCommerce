@@ -82,7 +82,6 @@ h2 {
 }
 
 .carousel img {
-  background-color: #fff;
   height: 300px;
   padding: 30px;
   margin: 40px;
@@ -90,7 +89,7 @@ h2 {
   margin-left: auto;
   margin-right: auto;
 }
-.carousel  {
+.carousel a {
   background-color: #fff;
   margin: 0 auto;
 }

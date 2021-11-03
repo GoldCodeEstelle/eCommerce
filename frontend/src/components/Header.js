@@ -23,7 +23,7 @@ const Header = () => {
           <LinkContainer to="/">
             <Navbar.Brand>
               {" "}
-              <span className="text">ProShop</span>
+              <span className="text">eCommerce</span>
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -51,7 +51,7 @@ const Header = () => {
               ) : (
                 <LinkContainer to="/login">
                   <Nav.Link>
-                    <i className="fas fa-user"></i> <span className="text">Sign In</span>
+                    <i className="fas fa-user text"></i> <span className="text">Sign In</span>
                   </Nav.Link>
                 </LinkContainer>
               )}
