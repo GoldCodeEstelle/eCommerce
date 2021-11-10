@@ -71,6 +71,8 @@ h2 {
 .carousel-item-prev,
 .carousel-item.active {
   display: flex;
+  width: 100%;
+ 
 }
 .carousel-caption {
   position: absolute;
@@ -78,22 +80,35 @@ h2 {
 }
 
 .carousel-caption h2 {
-  color: #fff;
+  color: rgb(12, 8, 8);
+
+}
+
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  background-color: #ffffff;
 }
 
 .carousel img {
-  height: 300px;
-  padding: 30px;
-  margin: 40px;
-  border-radius: 50%;
-  margin-left: auto;
-  margin-right: auto;
+  height: 100%;
+  width: 400%;
 }
 .carousel a {
   margin: 0 auto;
+  margin-top: 5%;
 }
 @media (max-width: 900px) {
   .carousel-caption h2 {
     font-size: 2.5vw;
+    
   }
+  
 }
+
+.carousel-control-next,
+.carousel-control-prev /*, .carousel-indicators */ {
+    filter: invert(100%);
+    
+}
+
