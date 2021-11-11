@@ -33,7 +33,7 @@ const Header = () => {
               <LinkContainer to="/cart">
                 <Nav.Link>
                   <i className="fas fa-shopping-cart text"></i>
-                  <span className="text">Cart</span>
+                  <span className="text"> Cart</span>
                 </Nav.Link>
               </LinkContainer>
               {userInfo ? (
@@ -51,7 +51,8 @@ const Header = () => {
               ) : (
                 <LinkContainer to="/login">
                   <Nav.Link>
-                    <i className="fas fa-user text"></i> <span className="text">Sign In</span>
+                    <i className="fas fa-user text"></i>{" "}
+                    <span className="text">Sign In</span>
                   </Nav.Link>
                 </LinkContainer>
               )}
